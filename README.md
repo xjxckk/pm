@@ -6,7 +6,7 @@
 * Go to Appearance
 * [Copy the CSS](https://raw.githubusercontent.com/xjxckk/pm/master/pm.css) and paste it under Custom Theme
 
-`@charset "UTF-8";
+```@charset "UTF-8";
 :root{
     --theme1:#667cbd;
     --theme2:#5f5f60;
@@ -325,4 +325,4 @@ body section.sidebar a.compose{
 }
 .composerHeader-container{
     color:var(--black)!important
-}`
+}```
