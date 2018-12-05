@@ -1,1 +1,1 @@
-# pm
+# ProtonMail Custom Theme
