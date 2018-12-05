@@ -6,6 +6,8 @@
 * Go to Appearance
 * [Copy the CSS](https://raw.githubusercontent.com/xjxckk/pm/master/pm.css) and paste it under Custom Theme
 
+
+### CSS:
 ```
 @charset "UTF-8";
 :root{
