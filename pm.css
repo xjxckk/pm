@@ -24,12 +24,16 @@
 
 @import url(//fonts.googleapis.com/css?family=Roboto);
 
-html{
-    background:var(--image) no-repeat center center fixed;
+html {
+    background: var(--image) no-repeat top left fixed;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover
+}
+p a {
+	color: var(--black) !important;
+	text-decoration: underline;
 }
 /* White BG */
 body #conversation-list-rows .conversation, body #conversation-list-rows .conversation.read, .pm_toolbar, #pm_settings, #conversation-view .message .summary, #conversation-view .message .summary .summary-right, #conversation-view .message .details .recipients-summary, #conversation-view .message .details .recipients-details, #conversation-view .message .details .action-row, .messageExtra-container>[class*=-container], #conversation-view .message .frame, #conversationHeader h1, .alert {
@@ -54,14 +58,14 @@ body #conversation-list-rows .conversation, body #conversation-list-rows .conver
 /* Buttons */
 .sidebarApp-container .sidebar-btn-compose:hover, .tooltip, .pm_buttons a:focus,.pm_buttons a:hover, .pm_buttons.primary a:focus,.pm_buttons.primary a:hover, .pm_buttons .pm_buttons-child:focus,.pm_buttons .pm_buttons-child:hover{
 	background: var(--image-white) no-repeat center center scroll !important;
-	box-shadow: 0 1px 2px rgba(0,0,0, 0.15),
-				0 2px 3px rgba(0,0,0, 0.3);
-	border-radius: 2px;
-	transition: box-shadow 0.25s ease-in-out;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+	box-shadow: 0 1px 2px rgba(0,0,0, 0.15),
+				0 2px 3px rgba(0,0,0, 0.3);
+	border-radius: 2px;
+	transition: box-shadow 0.25s ease-in-out;
 }
 .customCheckbox-input:checked+.customCheckbox-mask {
 	background-color: var(--black);
@@ -115,7 +119,7 @@ body #conversation-list-rows .conversation, body #conversation-list-rows .conver
 				0 0 3px rgba(0,0,0, 0.3);
 }
 /* Black */
-p a, #pm_main, body #conversation-list-rows .conversation .fa-star, #conversation-view .fa-star, .pm_buttons, body #conversation-list-rows .conversation .subject h4, .alert.alert-info, body #conversation-list-rows .conversation.read, .tooltip, html.protonmail .text-purple, .menuLabel-item.active .menuLabel-link,.sidebarApp-item.active .navigationItem-item,.sidebarApp-item.active .sidebarApp-link, .sidebarApp-item.active .navigationItem-icon, .sidebarApp-item.active i , .fa.fa-repeat.refresh.navigationItem-btn-refresh, #conversation-view .message .toggleDetails, .pm_button.link, .sidebarApp-container .sidebar-btn-compose:hover, .composerHeader-container {
+#pm_main, body #conversation-list-rows .conversation .fa-star, #conversation-view .fa-star, .pm_buttons, body #conversation-list-rows .conversation .subject h4, .alert.alert-info, body #conversation-list-rows .conversation.read, .tooltip, html.protonmail .text-purple, .menuLabel-item.active .menuLabel-link,.sidebarApp-item.active .navigationItem-item,.sidebarApp-item.active .sidebarApp-link, .sidebarApp-item.active .navigationItem-icon, .sidebarApp-item.active i , .fa.fa-repeat.refresh.navigationItem-btn-refresh, #conversation-view .message .toggleDetails, .pm_button.link, .sidebarApp-container .sidebar-btn-compose:hover, .composerHeader-container {
     color: var(--black) !important;
 }
 /* Loading */
@@ -182,6 +186,7 @@ body #conversation-list-rows .conversation.read .subject h4{
 	border-bottom:0;
 	margin-bottom: 5px;
 	opacity: 0.75;
+	
 }
 .tooltip {
 	opacity: 1;
@@ -222,7 +227,7 @@ body #conversation-list-rows .conversation.read .subject h4{
 #conversation-view .message{
 	border: 0;
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 #conversation-view .message .summary{
 	border: 0;
@@ -238,6 +243,14 @@ body #conversation-list-rows .conversation.read .subject h4{
 	padding: 0;
 	background: none;
 	border-bottom: 0;
+}
+.messageExtra-container > .messageExtra-container-error {
+	font-weight: 700;
+	color: #505061;
+	fill: #505061;
+}
+.messageExtra-container > .messageExtra-container-error a {
+	color: 
 }
 #conversation-view .message .details .recipients-summary, #conversation-view .message .details .recipients-details {
 	padding-left: 10px;
@@ -263,7 +276,11 @@ body #conversation-list-rows .conversation.read .subject h4{
 #conversation-view .message .frame{
 	border: 0;
 	margin: 0;
-	opacity: 1;
+	opacity: 0.75;
+	height: 100%;
+}
+#pm_thread {
+	-webkit-transform: none;
 }
 #conversation-view header {
 	border-bottom: 0;
@@ -294,6 +311,9 @@ body section.sidebar a.compose{
 	height: 45px;
 }
 .sidebarApp-container .sidebar-btn-compose:hover{
-	background-attachment: scroll !important;
-	background-position: center center !important;
+	background: var(--image-white) no-repeat center center scroll !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
