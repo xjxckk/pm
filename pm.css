@@ -36,7 +36,7 @@ p a {
 	text-decoration: underline;
 }
 /* White BG */
-body #conversation-list-rows .conversation, body #conversation-list-rows .conversation.read, .pm_toolbar, #pm_settings, #conversation-view .message .summary, #conversation-view .message .summary .summary-right, #conversation-view .message .details .recipients-summary, #conversation-view .message .details .recipients-details, #conversation-view .message .details .action-row, .messageExtra-container>[class*=-container], #conversation-view .message .frame, #conversationHeader h1, .alert {
+body #conversation-list-rows .conversation, body #conversation-list-rows .conversation.read, .pm_toolbar, #pm_settings, #conversation-view .message .summary, #conversation-view .message .summary .summary-right, #conversation-view .message .details .recipients-summary, #conversation-view .message .details .recipients-details, #conversation-view .message .details .action-row, .messageExtra-container>[class*=-container], #conversation-view .message .frame, #conversationHeader h1, .alert, #attachmentArea {
 	box-shadow: 0 1px 2px rgba(0,0,0, 0.15),
 				0 2px 3px rgba(0,0,0, 0.3);
 	border-radius: 2px;
@@ -54,6 +54,21 @@ body #conversation-list-rows .conversation, body #conversation-list-rows .conver
 	border-radius: 0;
 	border: 0;
 	margin: 0;
+}
+/* Scrollbar */
+::-webkit-scrollbar-thumb  {
+	background-color: hsla(0,0%,100%,.25);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	box-shadow: 0 1px 2px rgba(0,0,0, 0.15),
+				0 2px 3px rgba(0,0,0, 0.3);
+	border-radius: 20px;
+	transition: box-shadow 0.25s ease-in-out;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
 }
 /* Buttons */
 .sidebarApp-container .sidebar-btn-compose:hover, .tooltip, .pm_buttons a:focus,.pm_buttons a:hover, .pm_buttons.primary a:focus,.pm_buttons.primary a:hover, .pm_buttons .pm_buttons-child:focus,.pm_buttons .pm_buttons-child:hover{
@@ -92,21 +107,6 @@ body #conversation-list-rows .conversation, body #conversation-list-rows .conver
 }
 #conversation-view .message .summary .labels, #conversation-view .message .summary .location.folders, #conversation-view .message .summary .message-attachments, #conversation-view .message .summary .status, #conversation-view .message .summary .time {
 	background: none;
-}
-/* Scrollbar */
-::-webkit-scrollbar-thumb  {
-	background-color: hsla(0,0%,100%,.25);
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	box-shadow: 0 1px 2px rgba(0,0,0, 0.15),
-				0 2px 3px rgba(0,0,0, 0.3);
-	border-radius: 20px;
-	transition: box-shadow 0.25s ease-in-out;
-}
-
-::-webkit-scrollbar {
-	width: 5px;
 }
 /* Logo */
 .headerSecuredDesktop-logo:before {
@@ -154,9 +154,6 @@ body,body #body,body header,body header a.logo,body section.sidebar,#ptSidebar{
 }
 body #conversation-list-rows .conversation .fa-star-o{
 	opacity: 1;
-}
-.pm_buttons {
-	border: 1px solid rgba(20, 20, 20, .25);
 }
 .navigation>li.active, .navigation>li:hover{
 	border-color: var(--white);
@@ -249,9 +246,6 @@ body #conversation-list-rows .conversation.read .subject h4{
 	color: #505061;
 	fill: #505061;
 }
-.messageExtra-container > .messageExtra-container-error a {
-	color: 
-}
 #conversation-view .message .details .recipients-summary, #conversation-view .message .details .recipients-details {
 	padding-left: 10px;
 }
@@ -272,14 +266,14 @@ body #conversation-list-rows .conversation.read .subject h4{
 }
 .messageExtra-container>[class*=-container] {
 	padding-left: 10px;
+	margin-bottom: 5px;
 }
 #conversation-view .message .frame{
 	border: 0;
 	margin: 0;
-	opacity: 0.75;
-	height: 100%;
+	margin-bottom: 5px;
 }
-#pm_thread {
+body #pm_thread {
 	-webkit-transform: none;
 }
 #conversation-view header {
