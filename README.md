@@ -1,5 +1,5 @@
 ### ProtonMail Theme
-![ProtonMail Theme](https://jxck.cf/wp-content/uploads/pm.jpg)
+![ProtonMail Theme](https://github.com/xjxckk/pm/blob/master/pm.jpg)
 ### How to use:
 * Open ProtonMail
 * Go to Settings
